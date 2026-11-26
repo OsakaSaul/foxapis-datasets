@@ -1,0 +1,48 @@
+name: Weekly datasets
+
+on:
+  schedule:
+    - cron: '50 2 * * 1'
+  workflow_dispatch: {}
+  push:
+    paths: ['scripts/**', '.github/workflows/weekly.yml']
+
+permissions:
+  contents: write
+
+concurrency:
+  group: weekly-datasets
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install "pandas>=2.2,<3" "pyarrow>=16" "kaggle>=1.6,<2" "huggingface_hub>=0.24,<1"
+      - name: Build CSV, Parquet and data cards
+        run: python scripts/build.py
+      - name: Publish the files as the "latest" release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release view latest >/dev/null 2>&1 || gh release create latest --title "Latest data" --notes "Rebuilt weekly. See each dataset's card for columns, source and terms."
+          mkdir -p assets && cp dist/*/*.csv dist/*/*.parquet assets/
+          gh release upload latest assets/* --clobber
+      - name: Commit the refreshed cards and samples
+        run: |
+          git config user.name "foxapis-datasets bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add datasets
+          git diff --cached --quiet || (git commit -m "Weekly refresh of cards and samples [skip ci]" && git push)
+      - name: Push to Kaggle and Hugging Face
+        env:
+          KAGGLE_USERNAME: ${{ secrets.KAGGLE_USERNAME }}
+          KAGGLE_KEY: ${{ secrets.KAGGLE_KEY }}
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+          HF_NAMESPACE: ${{ vars.HF_NAMESPACE }}
+        run: python scripts/publish.py
