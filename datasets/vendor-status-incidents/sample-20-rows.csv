@@ -1,0 +1,21 @@
+started_date,tool,incident_title,impact_label_from_vendor,resolved_after,components,vendor_report_url,listed_on
+2026-11-26,monday.com,Degraded performance for 3rd party Apps,minor,18 minutes,Apps,https://stspg.io/lnwgrd3bzjq4,https://foxplug.com/status/monday
+2026-11-26,Twilio,SMS Delivery Delays from Twilio to Multiple Networks in Bahrain,minor,3 h 45 min,"SMS, Middle East & Africa",https://stspg.io/krpzh4mqjsbl,https://foxplug.com/status/twilio
+2026-11-26,Supabase,"Delays and Errors in Project Creation, Upgrades and Management API",no impact label,2 h 26 min,,https://status.supabase.com/incidents/01M8CAPAKR35CS7HFN1FZH01AY,https://foxplug.com/status/supabase
+2026-11-26,Sinch,Post-Incident Notification - Netherlands - Odido,no impact label,marked resolved at once,,https://stspg.io/tt17jn6jgjsf,https://foxplug.com/status/sinch
+2026-11-26,Sinch,Delivery Issue France - Bouygues Telecom,minor,11 h 1 min,SMS - EMEA,https://stspg.io/k1qgx1c86cdj,https://foxplug.com/status/sinch
+2026-11-26,Sinch,Delivery Issue Reunion/Mayotte - Orange,minor,3 h 50 min,SMS - EMEA,https://stspg.io/jw2cprj49xrn,https://foxplug.com/status/sinch
+2026-11-26,Scaleway,[Serverless Containers] - [nl-ams] - a few requests might end up in 5xx (or connection closed),minor,not marked resolved when we read it,nl-ams-1 and nl-ams-2,https://stspg.io/sfkf7c1zpglb,https://foxplug.com/status/scaleway
+2026-11-26,Scaleway,[Serverless Functions/Containers] - [fr-par] - DNS records for newly created functions and containers' default endpoints can take a while to,minor,2 h 37 min,fr-par-1 and fr-par-2,https://stspg.io/pcbtqkrr39s3,https://foxplug.com/status/scaleway
+2026-11-26,Prisma Data Platform,Accelerate intermittent errors creating new query engine instances,minor,1 h 22 min,Prisma Accelerate,https://stspg.io/bslqx5hjbrpl,https://foxplug.com/status/prisma-data-platform
+2026-11-26,Lovable,Domain features are not working for some users,no impact label,36 minutes,,https://status.lovable.dev/incidents/01M8CACADM4DX3QKXX9R6PXYXG,https://foxplug.com/status/lovable
+2026-11-26,Linear,ChatGPT integration issues,minor,1 h 13 min,,https://linearstatus.com/incidents/01M8BKE2B37TFHTKDQZYEJ4SJ4,https://foxplug.com/status/linear
+2026-11-26,Grafana Cloud,Stack Creation Failing for Grafana Cloud Users in Europe,major,2 h 16 min,Grafana.com,https://stspg.io/hmdmbpp6pkpc,https://foxplug.com/status/grafana-cloud
+2026-11-26,Fly.io,NRT partial outage,major,not marked resolved when we read it,,https://status.flyio.net/incidents/01M8CN67SN72188N1Z5VQAT74A,https://foxplug.com/status/fly-io
+2026-11-26,Fly.io,Timeouts querying app logs,minor,5 h 57 min,,https://status.flyio.net/incidents/01M8BM59WGKDPVDYYJYSZQH6R8,https://foxplug.com/status/fly-io
+2026-11-26,Cursor,Degraded Performance Grok Bot,minor,32 minutes,Grok Bot,https://status.cursor.com/incidents/ps_9c3a169909dde9f2,https://foxplug.com/status/cursor
+2026-11-26,Cloudflare,Cloudflare Dashboard and Cloudflare API service issues,major,2 h 13 min,Dashboard and API,https://www.cloudflarestatus.com/incidents/xiqj67vl5pqm,https://foxplug.com/status/cloudflare
+2026-11-26,Cloudflare,Cloudflare Billing Issues,minor,9 minutes,Subscriptions and R2,https://www.cloudflarestatus.com/incidents/qlwszxx4667e,https://foxplug.com/status/cloudflare
+2026-11-26,Cloudflare,RealTimeKit Recording Delays,minor,39 minutes,RealtimeKit,https://www.cloudflarestatus.com/incidents/mkudgr09g9ax,https://foxplug.com/status/cloudflare
+2026-11-26,Cloudflare,AI Gateway - Elevated errors for Gemini 4 models using Unified Billing,minor,3 h 47 min,AI Gateway,https://www.cloudflarestatus.com/incidents/filussqshtfq,https://foxplug.com/status/cloudflare
+2026-11-26,Cloudflare,Workers AI - Deepseek Flash increased errors,minor,1 minute,Workers AI,https://www.cloudflarestatus.com/incidents/6crqy1zulybd,https://foxplug.com/status/cloudflare

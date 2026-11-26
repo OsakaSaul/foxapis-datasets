@@ -1,0 +1,22 @@
+{
+ "federal-contract-awards": {
+  "built_on": "2026-11-26",
+  "rows": 697
+ },
+ "trademark-filings-by-class": {
+  "built_on": "2026-11-26",
+  "rows": 4935
+ },
+ "new-irs-recognized-nonprofits": {
+  "built_on": "2026-11-26",
+  "rows": 3572
+ },
+ "reg-cf-offerings": {
+  "built_on": "2026-11-26",
+  "rows": 77
+ },
+ "vendor-status-incidents": {
+  "built_on": "2026-11-26",
+  "rows": 1766
+ }
+}

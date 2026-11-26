@@ -1,0 +1,21 @@
+date,amount_obligated_usd,awarding_agency,naics_code,state_page,place_of_performance,set_aside,official_record_url,listed_on
+2026-11-21,2620471,Environmental Protection Agency,541519,North Carolina,,,https://www.usaspending.gov/award/CONT_AWD_68HERF27F0032_6800_NNG15SD38B_8000,https://foxapis.com/contracts/north-carolina/
+2026-11-20,837128,Department of Energy,541519,Colorado,,,https://www.usaspending.gov/award/CONT_AWD_89503027FWA401240_8900_NNG15SD87B_8000,https://foxapis.com/contracts/colorado/
+2026-11-20,1516760,National Aeronautics and Space Administration,513210,Illinois,"Schaumburg, Illinois",,https://www.usaspending.gov/award/CONT_AWD_80TECH27F0021_8000_80TECH26A0001_8000,https://foxapis.com/contracts/illinois/
+2026-11-20,542908,Department of Health and Human Services,325412,Massachusetts,"North Billerica, MA",Not stated,https://www.usaspending.gov/award/CONT_AWD_75N98027F00015_7529_36F79725D0093_3600,https://foxapis.com/contracts/massachusetts/
+2026-11-20,7335234,Department of Health and Human Services,541511,Maryland,"Columbia, Maryland",,https://www.usaspending.gov/award/CONT_AWD_75FCMC27F0006_7530_GS35F128BA_4732,https://foxapis.com/contracts/agency/health-and-human-services/
+2026-11-20,16578077,,561612,,"Atlanta, Georgia",,https://www.usaspending.gov/award/CONT_AWD_75D30127F21775_7523_47QSMS25D0079_4732,https://foxapis.com/contracts/agency/health-and-human-services/
+2026-11-20,1260390,Department of Homeland Security,336412,Massachusetts,,,https://www.usaspending.gov/award/CONT_AWD_70Z03827FJ0000024_7008_70Z03824DJ0000013_7008,https://foxapis.com/contracts/massachusetts/
+2026-11-20,3760800,Department of Transportation,483111,California,"Alameda, California",Not stated,https://www.usaspending.gov/award/CONT_AWD_6991PE27F00043N_6938_693JF725D000010_6938,https://foxapis.com/contracts/california/
+2026-11-20,792000,Department of Transportation,335312,Wisconsin,,,https://www.usaspending.gov/award/CONT_AWD_693KA827F00016_6920_693KA825D00002_6920,https://foxapis.com/contracts/wisconsin/
+2026-11-20,5932720,,237310,,"Melba, Idaho",,https://www.usaspending.gov/award/CONT_AWD_69056727F00005N_6925_69056725D000003_6925,https://foxapis.com/contracts/agency/transportation/
+2026-11-20,969767,General Services Administration,561210,,"Boise, ID",Not stated,https://www.usaspending.gov/award/CONT_AWD_47PG5127F0002_4740_47PL0223A0002_4740,https://foxapis.com/contracts/naics/561210-facilities-support-services/
+2026-11-20,2075410,General Services Administration,561210,Maryland,"Suitland, Maryland",Not stated,https://www.usaspending.gov/award/CONT_AWD_47PF5127F0001_4740_47PF5127A0001_4740,https://foxapis.com/contracts/agency/general-services-administration/
+2026-11-20,1674092,General Services Administration,236220,Pennsylvania,,,https://www.usaspending.gov/award/CONT_AWD_47PC5127F0016_4740_47PD0223D0006_4740,https://foxapis.com/contracts/pennsylvania/
+2026-11-20,3598924,General Services Administration,541611,Washington,"Seattle, Washington",Not stated,https://www.usaspending.gov/award/CONT_AWD_47PB5327F0003_4740_47PD0224A0006_4740,https://foxapis.com/contracts/agency/general-services-administration/
+2026-11-20,545509,Department of Veterans Affairs,541512,Colorado,,,https://www.usaspending.gov/award/CONT_AWD_36C79127N0006_3600_36C10G24D0048_3600,https://foxapis.com/contracts/colorado/
+2026-11-20,5076240,Department of Veterans Affairs,561320,California,"Los Angeles, CA",Not stated,https://www.usaspending.gov/award/CONT_AWD_36C26227N0191_3600_36C26223A0002_3600,https://foxapis.com/contracts/california/
+2026-11-20,2978061,Department of Veterans Affairs,561320,,"Los Angeles, CA",Not stated,https://www.usaspending.gov/award/CONT_AWD_36C26227N0171_3600_36C26223A0002_3600,https://foxapis.com/contracts/naics/561320-temporary-help-services/
+2026-11-20,915732,Department of Veterans Affairs,325412,Ohio,"Lima, OH",Not stated,https://www.usaspending.gov/award/CONT_AWD_36C25027N0137_3600_36C25023D0021_3600,https://foxapis.com/contracts/ohio/
+2026-11-20,2799643,Department of Veterans Affairs,236118,Virginia,,,https://www.usaspending.gov/award/CONT_AWD_36C24627C0006_3600_-NONE-_-NONE-,https://foxapis.com/contracts/virginia/
+2026-11-20,1663758,Department of Veterans Affairs,621399,New York,,,https://www.usaspending.gov/award/CONT_AWD_36C24227N0228_3600_36C24223D0008_3600,https://foxapis.com/contracts/new-york/
