@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """Push the files in dist/ to Kaggle and Hugging Face. A service without its token is skipped, not failed.
 
-Tokens come only from environment variables (repository secrets): KAGGLE_USERNAME + KAGGLE_KEY, and HF_TOKEN.
+Tokens come only from environment variables (repository secrets): KAGGLE_KEY (with a current KGAT_ token no
+KAGGLE_USERNAME is needed; a legacy 32-character key needs it), and HF_TOKEN.
 Nothing here prints or stores a token. HF_NAMESPACE (default: foxapis) is the Hugging Face account name.
 """
 import json
@@ -30,8 +31,30 @@ def kaggle(name):
         exists = subprocess.run(["kaggle", "datasets", "status", slug], capture_output=True, text=True).returncode == 0
         command = (["kaggle", "datasets", "version", "-p", str(folder), "-m", "Weekly refresh"] if exists
                    else ["kaggle", "datasets", "create", "-p", str(folder), "--public"])
-        subprocess.run(command, check=True)
-    print(f"Kaggle: {'new version of' if exists else 'created'} {slug}")
+        done = subprocess.run(command, capture_output=True, text=True)
+        said = (done.stdout or "") + (done.stderr or "")
+        print(said.strip())
+        # The client can refuse an upload and still exit 0, so only its own success sentence counts.
+        if done.returncode != 0 or "is being created" not in said:
+            raise RuntimeError("Kaggle did not accept the upload")
+    print(f"Kaggle: {'new version of' if exists else 'created'} https://www.kaggle.com/datasets/{slug}")
+
+
+def kaggle_sign_in():
+    """Fill KAGGLE_USERNAME. A current Kaggle token (KGAT_...) needs no username secret: Kaggle says whose it is."""
+    if os.environ.get("KAGGLE_USERNAME") or not os.environ.get("KAGGLE_KEY", "").startswith("KGAT_"):
+        return
+    os.environ["KAGGLE_API_TOKEN"] = os.environ["KAGGLE_KEY"]
+    try:
+        from kaggle.api.kaggle_api_extended import KaggleApi
+        api = KaggleApi()
+        api.authenticate()
+        user = api.get_config_value("username")
+    except (Exception, SystemExit) as error:  # the client calls exit() when it cannot sign in
+        print(f"Kaggle: the token was not accepted ({type(error).__name__})")
+        return
+    if user:
+        os.environ["KAGGLE_USERNAME"] = user
 
 
 def hugging_face(name):
@@ -46,15 +69,18 @@ def hugging_face(name):
 
 if __name__ == "__main__":
     targets = []
+    failed = []
+    kaggle_sign_in()
     if os.environ.get("KAGGLE_USERNAME") and os.environ.get("KAGGLE_KEY"):
         targets.append(kaggle)
+    elif os.environ.get("KAGGLE_KEY"):
+        failed.append("kaggle sign-in")   # a token that does not work must turn the run red, not be skipped
     else:
         print("Kaggle: no token yet, skipped")
     if os.environ.get("HF_TOKEN"):
         targets.append(hugging_face)
     else:
         print("Hugging Face: no token yet, skipped")
-    failed = []
     for target in targets:
         for name in META:
             try:
