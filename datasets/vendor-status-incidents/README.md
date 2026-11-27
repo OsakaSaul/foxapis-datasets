@@ -2,7 +2,7 @@
 
 One incident a software vendor posted on its own official status page, as listed on a FoxPlug status page.
 
-| File | Rows (built 2026-11-26) |
+| File | Rows (built 2026-11-27) |
 |---|---|
 | `vendor-status-incidents-current.csv` | 1,766 |
 

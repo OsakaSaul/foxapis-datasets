@@ -2,7 +2,7 @@
 
 One organization with an IRS ruling in the newest month, as listed on a FoxAPIs state page.
 
-| File | Rows (built 2026-11-26) |
+| File | Rows (built 2026-11-27) |
 |---|---|
 | `new-irs-recognized-nonprofits-current.csv` | 3,572 |
 

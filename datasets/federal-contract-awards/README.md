@@ -2,7 +2,7 @@
 
 One new federal contract award listed on a FoxAPIs contract page (the largest recent ones by state, agency and industry).
 
-| File | Rows (built 2026-11-26) |
+| File | Rows (built 2026-11-27) |
 |---|---|
 | `federal-contract-awards-current.csv` | 697 |
 

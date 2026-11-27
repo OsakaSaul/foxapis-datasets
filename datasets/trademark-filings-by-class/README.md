@@ -2,7 +2,7 @@
 
 One recent US trademark application listed on a FoxAPIs class page. A mark filed in several classes can appear once per class.
 
-| File | Rows (built 2026-11-26) |
+| File | Rows (built 2026-11-27) |
 |---|---|
 | `trademark-filings-by-class-current.csv` | 4,935 |
 

@@ -2,7 +2,7 @@
 
 One Regulation Crowdfunding offering listed on a FoxAPIs state page.
 
-| File | Rows (built 2026-11-26) |
+| File | Rows (built 2026-11-27) |
 |---|---|
 | `reg-cf-offerings-current.csv` | 77 |
 
