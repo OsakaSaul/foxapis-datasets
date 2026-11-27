@@ -51,7 +51,7 @@ def kaggle_sign_in():
         api.authenticate()
         user = api.get_config_value("username")
     except (Exception, SystemExit) as error:  # the client calls exit() when it cannot sign in
-        print(f"Kaggle: the token was not accepted ({type(error).__name__})")
+        print(f"Kaggle: sign-in failed ({type(error).__name__} {getattr(error, 'name', '') or ''})")   # the module name only, never the message
         return
     if user:
         os.environ["KAGGLE_USERNAME"] = user
