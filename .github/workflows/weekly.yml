@@ -23,7 +23,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - run: pip install "pandas>=2.2,<3" "pyarrow>=16" "kaggle>=2.2,<3" "huggingface_hub>=0.24,<1"
+      - run: pip install "pandas>=2.2,<3" "pyarrow>=16" "kaggle>=2.2,<3" six "huggingface_hub>=0.24,<1"
       - name: Build CSV, Parquet and data cards
         run: python scripts/build.py
       - name: Build the page snapshots
